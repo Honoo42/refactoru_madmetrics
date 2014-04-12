@@ -7,8 +7,12 @@
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+	<p id="clock"></p>
 	<button class="btn-met">Metric View</button>
+	<div id="container">
+	<button class="demo"></button>
 	<h1>Insert some random text</h1>
+<p id="info"></p>
 		<p>Lorem <span id="timer"></span> imeripsum dolor sit amet, consectetur adipiscing elit. Nam at vestibulum orci, quis laoreet lectus. Mauris sem urna, tincidunt ac ultricies quis, molestie quis mi. Sed quis ultricies urna. Maecenas et ligula non nisi aliquet tempus non at velit. Nam eleifend, lectus et vestibulum consequat, dui nisl volutpat tellus, eget varius mi neque vitae orci. Integer bibendum ante tellus, a vehicula neque cursus quis. Curabitur hendrerit in libero id ullamcorper. Mauris ullamcorper fermentum pharetra. Fusce fermentum condimentum odio, eu ornare turpis gravida ut. Phasellus eu risus eget dolor ultricies congue sit amet nec orci. Sed sodales nibh massa, hendrerit congue lacus congue eget. Vestibulum libero justo, pellentesque ac vehicula vitae, adipiscing consectetur ante.
 
 Vivamus porta a mi sit amet volutpat. Vivamus malesuada massa odio, vitae porta mauris rhoncus vitae. Proin felis augue, dignissim sit amet magna id, tincidunt consequat erat. Phasellus ullamcorper purus dui, at pharetra lacus semper in. Phasellus lacinia blandit purus vel dignissim. Sed ut lacus vitae tellus venenatis porttitor eget vitae diam. Aliquam dolor nisi, facilisis sed nisi id, cursus euismod ipsum. Vestibulum gravida elit lectus, at semper elit venenatis ut. Etiam non ornare enim, ac semper neque. Nunc placerat elit ligula. Cras suscipit consequat tellus, eleifend luctus est molestie sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc eget odio quis nisl luctus tincidunt. Vivamus commodo a augue ut vestibulum. Praesent at lectus eu massa sodales scelerisque. Mauris id urna ipsum.
@@ -28,6 +32,7 @@ Duis pulvinar leo in tincidunt dapibus. Ut ultricies tempus justo, sed interdum 
 Integer quis sem dui. Quisque ut tempus eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla augue dolor, posuere eu arcu et, posuere pretium neque. Etiam nec velit id erat vulputate volutpat a nec lacus. Donec luctus tincidunt velit eget vulputate. Fusce eleifend scelerisque felis, eget ultrices justo semper eu. Ut tempor lacus eget augue sodales mattis. Aenean quis mattis felis. Nam nec varius ligula, ut commodo dui. Sed felis dui, vulputate at rhoncus sit amet, fringilla sit amet purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse ac quam augue.
 
 Duis purus turpis, consequat at leo ac, fringilla malesuada odio. Mauris tincidunt lorem sed tortor pellentesque suscipit. Etiam metus sem, porttitor at ornare et, scelerisque et felis. Nulla pellentesque sollicitudin neque, vel vulputate dolor lobortis at. Duis sed nunc eu tortor bibendum lobortis. Phasellus dictum sit amet massa id sodales. Curabitur aliquam pulvinar urna id imperdiet.</p>
+	</div>
 	<h1>Insert some random text</h1>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at vestibulum orci, quis laoreet lectus. Mauris sem urna, tincidunt ac ultricies quis, molestie quis mi. Sed quis ultricies urna. Maecenas et ligula non nisi aliquet tempus non at velit. Nam eleifend, lectus et vestibulum consequat, dui nisl volutpat tellus, eget varius mi neque vitae orci. Integer bibendum ante tellus, a vehicula neque cursus quis. Curabitur hendrerit in libero id ullamcorper. Mauris ullamcorper fermentum pharetra. Fusce fermentum condimentum odio, eu ornare turpis gravida ut. Phasellus eu risus eget dolor ultricies congue sit amet nec orci. Sed sodales nibh massa, hendrerit congue lacus congue eget. Vestibulum libero justo, pellentesque ac vehicula vitae, adipiscing consectetur ante.
 
@@ -468,6 +473,17 @@ Duis pulvinar leo in tincidunt dapibus. Ut ultricies tempus justo, sed interdum 
 Integer quis sem dui. Quisque ut tempus eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla augue dolor, posuere eu arcu et, posuere pretium neque. Etiam nec velit id erat vulputate volutpat a nec lacus. Donec luctus tincidunt velit eget vulputate. Fusce eleifend scelerisque felis, eget ultrices justo semper eu. Ut tempor lacus eget augue sodales mattis. Aenean quis mattis felis. Nam nec varius ligula, ut commodo dui. Sed felis dui, vulputate at rhoncus sit amet, fringilla sit amet purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse ac quam augue.
 
 Duis purus turpis, consequat at leo ac, fringilla malesuada odio. Mauris tincidunt lorem sed tortor pellentesque suscipit. Etiam metus sem, porttitor at ornare et, scelerisque et felis. Nulla pellentesque sollicitudin neque, vel vulputate dolor lobortis at. Duis sed nunc eu tortor bibendum lobortis. Phasellus dictum sit amet massa id sodales. Curabitur aliquam pulvinar urna id imperdiet.</p>
+
+<div style="width:200px;height:200px; overflow:auto;">
+        Please scroll this field!
+        <div style="height:300px; width:2000px; background-color:#a08080;"></div>
+        Please scroll this field!
+        <div style="height:300px; width:2000px; background-color:#a08080;"></div>
+        Please scroll this field!
+    </div>
+    <br /><br />
+    Current scroll amounts:
+    <div id='info'></div>
 
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
   <script src="main.js"></script>
