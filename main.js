@@ -1,11 +1,11 @@
 $(document).on('ready', function() {
   
-  var getContainerDim= function getContainerSize () {
-    var container= document.getElementById('#container');
-    var cMessage ="The width of the contents width padding: "  + "px.\n"+
-            "The height of the contents width padding: " + container.scrollHeight + "px.\n"; 
-          console.log(cMessage);
-          };
+  // var getContainerDim= function getContainerSize () {
+  //   var container= document.getElementById('#container');
+  //   var cMessage ="The width of the contents width padding: "  + "px.\n"+
+  //           "The height of the contents width padding: " + container.scrollHeight + "px.\n"; 
+  //         console.log(cMessage);
+  //         };
   var clickMetrics = function() {
   	var time = new Date();
     var elapsedTime = time.getTime();
@@ -14,7 +14,7 @@ $(document).on('ready', function() {
   	};
 
   	$(document).on('click','.btn-met',clickMetrics);
-    $(document).on('click','.demo',getContainerDim);
+    // $(document).on('click','.demo',getContainerDim);
 // making a count down timer
 //   	var count=10;
 
@@ -56,6 +56,11 @@ var clockTimer = setInterval(function() {myClock()}, 1000);
     document.getElementById("clock").innerHTML=localTime;
   };
 
+// Scroll distance, lastScroll sets the default global scroll distance 
+// and totalScroll is the running total since the page was loaded
+var lastScroll = 0;
+var totalScroll = 0;
+
 // creates a scrolling function that returns the px location
 // of the scroll bar in the console
   $(window).on('scroll',function () {
@@ -63,7 +68,21 @@ var clockTimer = setInterval(function() {myClock()}, 1000);
   var scrollTop = $(window).scrollTop();
   var scrollLeft = $(window).scrollLeft();
   console.log( "Horizontal: " + $(window).scrollLeft() + "px\n Vertical: " + $(window).scrollTop() + "px");
+
+
+
+
+// takes the absolute vaule of the difference between the current scrolling value
+// and the last reported scroll value. += provides a continuous update
+    totalScroll += Math.abs(scrollTop - lastScroll);
+
+
+
+// set to the bottom so that it does not overwrite the global value
+  lastScroll = scrollTop;
+    console.log("Total distance scrolled: " + totalScroll + "pixels");
 });
+
 
 
 // container height
